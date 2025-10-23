@@ -1,12 +1,12 @@
 import Screen from '../../../components/screen';
-import Div from '../../../components/div';
+import DivRow from '../../../components/divRow';
 import Titulo from '../../../components/titulo';
 export default function Index() {
     return (
         <Screen>
-            <Div>
+            <DivRow>
                 <Titulo title={'Pagina Principal'}></Titulo>
-            </Div>
+            </DivRow>
         </Screen>
     );
 }

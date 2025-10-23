@@ -13,7 +13,6 @@ export default function Layout() {
                 drawerContent={(props) => <CustomDrawer {...props} />}
                 screenOptions={{
                     headerStyle: { backgroundColor: "#fffff" },
-                    headerTintColor: "white",
                     drawerActiveTintColor: "#2A2E35",
                     drawerInactiveTintColor: "#2A2E35",
                     drawerActiveBackgroundColor: "none",
@@ -50,7 +49,7 @@ export default function Layout() {
                     }}
                 />
             </Drawer>
-            <Toast topOffset={60}/>
+            <Toast topOffset={60} />
         </SafeAreaProvider>
 
     );

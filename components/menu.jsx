@@ -7,6 +7,7 @@ export default function CustomDrawer(props) {
     return (
         <DrawerContentScrollView {...props} contentContainerStyle={{ flex: 1 }}>
             {/* Header */}
+            
             <View style={styles.header}>
                 <Image
                     source={img}
@@ -27,11 +28,11 @@ export default function CustomDrawer(props) {
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "#0a1e33",
-        padding: 20,
+        backgroundColor: "#0041F2",
+        padding: 30,
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 10,
+        borderRadius: 20,
     },
     avatar: {
         width: 80,

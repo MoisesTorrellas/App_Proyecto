@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 
-export default function Div({ children}) {
+export default function DivColumn({ children}) {
     return(
         <View style={styles.div} >{children}</View>
     );
@@ -8,7 +8,7 @@ export default function Div({ children}) {
 
 const styles = StyleSheet.create({
     div: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '100%',
