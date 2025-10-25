@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Plantilla_Proyecto",
+    "slug": "Plantilla_Proyecto",
+    "scheme": "scheme",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logoipsum-392.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logoipsum-392.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logoipsum-392.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.moises_torrellas.Plantilla_Proyecto"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ee40fc28-916d-49c3-a675-42dbc3d2a9a0"
+      }
+    }
+  }
+}
