@@ -1,37 +1,41 @@
 import { Tabs } from "expo-router";
 import { UserIcon, UsersIcon, ExclamationCircleIcon } from "react-native-heroicons/solid";
+import { useTheme } from '../../../hooks/useTheme';
 
 export default function TabsUser() {
+    const { isDarkMode } = useTheme();
+
+    const tabBarBgColor = isDarkMode ? '#1A1A1A' : '#ffffff';
+    const activeColor = isDarkMode ? '#00A8FF' : '#0041F2';
+    const inactiveColor = isDarkMode ? '#BBBBBB' : '#2A2E35';
+
     return (
         <Tabs
             screenOptions={{
                 headerShown: false,
                 tabBarStyle: {
-                    height: 65, // altura de la barra inferior
-                    paddingBottom: 10, // espacio inferior para que no quede pegado
+                    height: 65,
+                    paddingBottom: 10,
                     paddingTop: 5,
-                    backgroundColor: '#ffffff',
-                    borderColor: 'none',
-                    borderTopColor: 'none',
+                    backgroundColor: tabBarBgColor,
                     borderTopWidth: 0,
                     elevation: 0,
                     shadowOpacity: 0,
                 },
                 tabBarLabelStyle: {
-                    fontSize: 12, // tamaño de letra del label
+                    fontSize: 12,
                     fontWeight: "600",
-        
                 },
-                tabBarActiveTintColor: '#0041F2',
-                tabBarInactiveTintColor: '#2A2E35',
+                tabBarActiveTintColor: activeColor,
+                tabBarInactiveTintColor: inactiveColor,
             }}
         >
             <Tabs.Screen
                 name="index"
                 options={{
                     title: "Usuarios",
-                    tabBarIcon: ({ color }) => (
-                        <UserIcon color={color} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <UserIcon color={focused ? activeColor : inactiveColor} size={24} />
                     ),
                 }}
             />
@@ -39,8 +43,8 @@ export default function TabsUser() {
                 name="gestionarRoles"
                 options={{
                     title: "Roles",
-                    tabBarIcon: ({ color }) => (
-                        <UsersIcon color={color} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <UsersIcon color={focused ? activeColor : inactiveColor} size={24} />
                     ),
                 }}
             />
@@ -48,9 +52,16 @@ export default function TabsUser() {
                 name="gestionarPermisos"
                 options={{
                     title: "Permisos",
-                    tabBarIcon: ({ color }) => (
-                        <ExclamationCircleIcon color={color} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <ExclamationCircleIcon color={focused ? activeColor : inactiveColor} size={24} />
                     ),
+                }}
+            />
+            {/* Ocultar la ruta registrar (si existe) */}
+            <Tabs.Screen
+                name="registrar"
+                options={{
+                    tabBarButton: () => null,
                 }}
             />
         </Tabs>
