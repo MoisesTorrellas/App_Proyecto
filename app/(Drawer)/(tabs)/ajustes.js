@@ -8,6 +8,9 @@ import {useTheme} from '../../../hooks/useTheme';
 export default function Ajustes() {
     const router = useRouter();
     const { isDarkMode, toggleTheme } = useTheme();
+
+export default function Ajustes() {
+    const router = useRouter();
     const cerrar = async () => {
         await AsyncStorage.removeItem("userToken");
         router.replace("/(auth)/login");
@@ -29,6 +32,10 @@ export default function Ajustes() {
             <Screen>
                 <Boton title={'Cerrar Sesión'} onPress={cerrar} />
             </Screen>
+    return (
+        <Screen>
+            <Text>¡Bienvenido a Ajustes!</Text>
+            <Boton title={'Cerrar Sesión'} onPress={cerrar}></Boton>
         </Screen>
     );
 }

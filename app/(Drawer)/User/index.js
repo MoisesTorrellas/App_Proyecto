@@ -1,6 +1,7 @@
 import { FlatList } from 'react-native';
 import {useRouter} from 'expo-router';
 
+
 import DivRow from '../../../components/divRow';
 import DivColumn from '../../../components/divColumn';
 import Screen from '../../../components/screen';
@@ -26,6 +27,15 @@ export default function GestionarUsuarios() {
             </DivRow>
             <DivRow>
                 <Boton title={'Nuevo Usuario'} width={"70%"} fontSize={15} onPress={handleNuevoUsuarioPress}></Boton>
+    const { usuarios, error } = useUsuarios();
+    return (
+        <Screen>
+            <DivRow>
+                <Titulo title={'Gestinar Usuarios'}></Titulo>
+            </DivRow>
+            <DivRow>
+                <Boton title={'Nuevo Usuario'} width={"70%"} fontSize={15}></Boton>
+
             </DivRow>
             <DivRow>
                 <Buscador placeholder='Buscar Usuario'></Buscador>

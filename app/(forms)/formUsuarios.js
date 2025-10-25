@@ -8,6 +8,7 @@ import Titulo from '../../components/titulo.jsx';
 import Boton from '../../components/boton.jsx';
 import Input from '../../components/input.jsx';
 import Toast from 'react-native-toast-message';
+import {validarCamposUsuario} from '../../util/validacionesUser';
 import { useRouter } from 'expo-router'; 
 
 export default function RegistrarUsuarioScreen() {

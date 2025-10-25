@@ -8,6 +8,10 @@ export default function DivColumn({ children, style}) {
         <View style={[styles.div, { backgroundColor }, style]} >
             {children}
         </View>
+
+export default function DivColumn({ children}) {
+    return(
+        <View style={styles.div} >{children}</View>
     );
 }
 

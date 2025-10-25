@@ -4,6 +4,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ThemeProvider } from "../hooks/useTheme";
 
 function RootLayoutContent() {
+
+
+export default function RootLayout() {
     const router = useRouter();
 
     useEffect(() => {

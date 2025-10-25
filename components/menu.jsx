@@ -32,6 +32,11 @@ export default function CustomDrawer(props) {
             contentContainerStyle={[styles.contentContainer, drawerStyles.contentContainerDynamic]}
         >
             <View style={[styles.header, drawerStyles.headerDynamic]}>
+    return (
+        <DrawerContentScrollView {...props} contentContainerStyle={{ flex: 1 }}>
+            {/* Header */}
+            
+            <View style={styles.header}>
                 <Image
                     source={img}
                     style={styles.avatar}
@@ -43,6 +48,14 @@ export default function CustomDrawer(props) {
                 {...props}
                 itemStyle={styles.itemStyle}
                 labelStyle={[styles.labelStyle, { color: isDarkMode ? 'white' : 'black' }]}
+                <Text style={styles.name}>Moises Torrellas</Text>
+            </View>
+
+            {/* Botones del Drawer */}
+            <DrawerItemList
+                {...props}
+                itemStyle={styles.itemStyle}
+                labelStyle={styles.labelStyle}
             />
         </DrawerContentScrollView>
     );
@@ -50,6 +63,8 @@ export default function CustomDrawer(props) {
 
 const styles = StyleSheet.create({
     header: {
+
+        backgroundColor: "#0041F2",
         padding: 30,
         alignItems: "center",
         justifyContent: "center",
@@ -62,6 +77,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     name: {
+        color: "white",
         fontSize: 18,
         fontWeight: "bold",
     },
@@ -75,3 +91,5 @@ const styles = StyleSheet.create({
         flex: 1,
     }
 });
+});
+

@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+<<<<<<< HEAD
 import {useTheme} from '../hooks/useTheme';
 
 export default function DivRow({ children, style}) {
@@ -11,6 +12,14 @@ export default function DivRow({ children, style}) {
         </View>
     );
 }    
+=======
+
+export default function DivRow({ children}) {
+    return(
+        <View style={styles.div} >{children}</View>
+    );
+}
+>>>>>>> 2b42710c0a034b3d00892efe2d404d5280025ed4
 
 const styles = StyleSheet.create({
     div: {
